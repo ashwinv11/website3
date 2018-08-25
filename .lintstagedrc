@@ -1,0 +1,5 @@
+{
+  "*.{vue,ts,tsx,json,md,js}": ["prettier --write", "git add"],
+  "*.{ts,tsx}": "yarn lint",
+  "*.{scss}": "stylelint --syntax=scss"
+}
