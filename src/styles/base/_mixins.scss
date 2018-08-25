@@ -1,0 +1,7 @@
+@mixin transition($time, $type: ease-in-out) {
+  transition: all $time $type;
+}
+
+@mixin border-radius() {
+  border-radius: 0.125rem;
+}

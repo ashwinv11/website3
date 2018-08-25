@@ -1,0 +1,29 @@
+body {
+  background-color: $neutral-9;
+  color: $neutral-0;
+}
+
+.app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+  float: right;
+
+  a {
+    text-transform: lowercase;
+    font-weight: bold;
+
+    &.router-link-exact-active {
+      color: $neutral-3;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $neutral-1;
+    }
+  }
+}
