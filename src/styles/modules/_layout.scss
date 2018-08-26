@@ -1,17 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  overflow: hidden;
+}
+
 body {
-  background-color: $neutral-9;
-  color: $neutral-0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $neutral-9;
+  color: $neutral-0;
 }
 
-.app__content {
-  padding: 12vmin 2vmin 0;
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  height: 100%;
+  width: 100%;
 }
 
-.nav {
+.app__nav {
+  grid-area: header;
   font-size: 4vmin;
-  float: right;
+  padding: $global-padding;
 
   a {
     text-transform: lowercase;
@@ -26,4 +45,16 @@ body {
       color: $neutral-1;
     }
   }
+}
+
+.app__content {
+  padding: $global-padding;
+  grid-area: main;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.app__footer {
+  grid-area: footer;
+  padding: $global-padding;
 }
