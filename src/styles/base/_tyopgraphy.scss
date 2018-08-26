@@ -1,12 +1,17 @@
+body {
+  font-family: 'IBM Plex Sans';
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  // font-family: 'Raleway';
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
   font-weight: 300;
-  color: $neutral-3;
+  color: $scarlet;
 }
 
 h1 {
@@ -30,13 +35,6 @@ p {
   line-height: 8vmin;
 }
 
-span,
-li,
-time {
-  // font-family: 'Open Sans';
-  font-size: 1rem;
-}
-
 i {
   font-size: 2rem;
 }
@@ -55,4 +53,10 @@ a {
     color: $neutral-1;
     box-shadow: inset 0 -0.2rem 0 0 $accent;
   }
+}
+
+.italic {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 300;
 }

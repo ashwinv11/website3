@@ -2,8 +2,11 @@ $white: #ffffff;
 $black: #000000;
 
 // Primary colors
+$red: #d54848;
 $ruby: #d13737;
-$garnet: #88292b;
+$scarlet: #be2c2c;
+$garnet: #982e30;
+$wine: #88292b;
 
 $neutral-0: #fefdfd;
 $neutral-1: #c9c9c9;
@@ -17,4 +20,4 @@ $neutral-8: #1f1f1f;
 $neutral-9: #151515;
 
 $accent: $ruby;
-$link-accent: rgba($garnet, 0.4);
+$link-accent: rgba($wine, 0.4);

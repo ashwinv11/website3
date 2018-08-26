@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  src: local('IBM Plex Sans Light Italic'), local('IBMPlexSans-LightItalic'),
+    url('styles/fonts/ibm-plex-sans/IBMPlexSans-LightItalic.woff2')
+      format('woff2'),
+    url('styles/fonts/ibm-plex-sans/IBMPlexSans-LightItalic.woff')
+      format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans', sans-serif;
+  src: local('IBM Plex Sans'), local('IBMPlexSans'),
+    url('styles/fonts/ibm-plex-sans/IBMPlexSans.woff2') format('woff2'),
+    url('styles/fonts/ibm-plex-sans/IBMPlexSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono', monospace;
+  src: local('IBM Plex Mono Light Italic'), local('IBMPlexMono-LightItalic'),
+    url('styles/fonts/ibm-plex-mono/IBMPlexMono-LightItalic.woff2')
+      format('woff2'),
+    url('styles/fonts/ibm-plex-mono/IBMPlexMono-LightItalic.woff')
+      format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
