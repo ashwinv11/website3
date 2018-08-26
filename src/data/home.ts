@@ -11,5 +11,5 @@ export const Data: object = {
         <a href="https://kadenze.com/" target="_blank" class="italic">Kadenze</a>.
         Feel free to explore my website for my projects, music, and other work.
         Oh also, this website is entirely open source, which you can find
-        <a href="https://github.com/ashwinv11/website3" target="_blank">here<a>.`,
+        <a href="https://github.com/ashwinv11/website3" target="_blank">here</a>.`,
 }

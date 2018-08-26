@@ -1,17 +1,14 @@
 <template>
   <div class="home">
-    <Home/>
+    <h1>{{$options.json.title}}</h1>
+    <p v-html="$options.json.body"></p>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Home from '@/components/Home.vue' // @ is an alias to /src
+import { Data } from '../data/home'
 
-export default Vue.extend({
-  name: 'home',
-  components: {
-    Home,
-  },
-})
+export default {
+  json: Data,
+}
 </script>
