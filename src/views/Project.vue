@@ -5,7 +5,9 @@
     </div>
 
     <div v-else>
-      {{project.title}}
+      <h1>{{project.title}}</h1>
+      <h3>{{project.date}}</h3>
+      <div v-html="project.body"></div>
     </div>
   </article>
 </template>

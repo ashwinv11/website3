@@ -17,6 +17,11 @@
 .projects__item {
   @include border-radius();
   border: 1px groove $garnet;
+  padding: 1rem;
+
+  h4 {
+    @include transition(0.2s);
+  }
 
   &:hover,
   &:focus,
@@ -24,6 +29,10 @@
     @include elevation(4);
     background-color: $ruby;
     border: 1px groove $ruby;
+
+    h4 {
+      color: $neutral-0;
+    }
   }
 }
 </style>
