@@ -31,8 +31,11 @@ body {
   grid-area: header;
   font-size: 4vmin;
   padding: $global-padding;
+  display: flex;
+  justify-content: flex-end;
 
   a {
+    margin: 0 0.2rem;
     text-transform: lowercase;
 
     &.router-link-exact-active {
