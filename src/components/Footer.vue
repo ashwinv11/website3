@@ -1,18 +1,18 @@
 <template>
   <footer class="app__footer">
-    <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!">
+    <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
       <icon name="envelope"></icon>
     </a>
-    <a href="https://github.com/ashwinv11" target="_blank">
+    <a href="https://github.com/ashwinv11" class="block-link" target="_blank">
       <icon name="brands/github"></icon>
     </a>
-    <a href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410" target="_blank">
+    <a href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410" class="block-link" target="_blank">
       <icon name="brands/linkedin"></icon>
     </a>
-    <a href="https://instagram.com/ashwinv11" target="_blank">
+    <a href="https://instagram.com/ashwinv11" class="block-link" target="_blank">
       <icon name="brands/instagram"></icon>
     </a>
-    <a href="https://soundcloud.com/aries-official-music/" target="_blank">
+    <a href="https://soundcloud.com/aries-official-music/" class="block-link" target="_blank">
       <icon name="brands/soundcloud"></icon>
     </a>
   </footer>
@@ -42,6 +42,7 @@ export default Vue.extend({
   }
 
   a {
+    color: $accent;
     box-shadow: none;
     &:hover,
     &:focus,

@@ -1,11 +1,8 @@
 <template>
   <div class="projects">
-    <a href="#" class="projects__item block-link"></a>
-    <a href="#" class="projects__item block-link"></a>
-    <a href="#" class="projects__item block-link"></a>
-    <a href="#" class="projects__item block-link"></a>
-    <a href="#" class="projects__item block-link"></a>
-    <a href="#" class="projects__item block-link"></a>
+    <router-link v-for="project in $options.projects" :key="project.slug" :to="{ name: 'project', params: { slug: project.slug }}" class="projects__item block-link">
+      <h4>{{project.title}}</h4>
+    </router-link>
   </div>
 </template>
 
@@ -30,3 +27,11 @@
   }
 }
 </style>
+
+<script lang="ts">
+import { Projects } from '@/data/projects'
+
+export default {
+  projects: Projects,
+}
+</script>

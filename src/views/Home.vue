@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { Data } from '../data/home'
+import { Data } from '@/data/home'
 
 export default {
   json: Data,
