@@ -1,6 +1,8 @@
 <template>
   <footer class="app__footer">
-    <router-link class="app__footer-project-nav block-link" v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject }}" >&#8592; Previous</router-link>
+    <span class="app__footer-project-nav-container">
+      <router-link class="app__footer-project-nav block-link" v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; {{previousProject.title}}</router-link>
+    </span>
     <div class="app__footer-social">
       <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
         <icon name="envelope"></icon>
@@ -18,7 +20,9 @@
         <icon name="brands/soundcloud"></icon>
       </a>
     </div>
-    <router-link class="app__footer-project-nav block-link" v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject }}">Next &#8594;</router-link>
+    <span class="app__footer-project-nav-container">
+      <router-link class="app__footer-project-nav block-link" v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}">{{nextProject.title}} &#8594;</router-link>
+    </span>
   </footer>
 </template>
 
@@ -37,8 +41,8 @@ import { Project } from '@/interfaces/project'
 const findProjectNavItems = (slug: string): any => {
   const projectIndex = Projects.findIndex(project => slug === project.slug)
   return {
-    prev: Projects[projectIndex - 1] ? Projects[projectIndex - 1].slug : '',
-    next: Projects[projectIndex + 1] ? Projects[projectIndex + 1].slug : '',
+    prev: Projects[projectIndex - 1] ? Projects[projectIndex - 1] : null,
+    next: Projects[projectIndex + 1] ? Projects[projectIndex + 1] : null,
   }
 }
 
@@ -69,11 +73,12 @@ export default Vue.extend({
 <style lang="scss">
 .app__footer {
   display: flex;
+  align-items: center;
 
   a {
     color: $accent;
     box-shadow: none;
-    margin-right: 4vmin;
+
     &:hover,
     &:focus,
     &:active {
@@ -88,12 +93,28 @@ export default Vue.extend({
 }
 
 .app__footer-project-nav {
-  font-size: 4vmin;
+  font-size: 3vmin;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 24vmin;
+}
+
+.app__footer-project-nav-container {
+  width: 32vmin;
+  min-width: 0;
+
+  &:last-of-type {
+    text-align: right;
+  }
 }
 
 .app__footer-social {
   flex: 1;
   text-align: center;
+
+  a {
+    margin-right: 4vmin;
+  }
 
   svg {
     filter: drop-shadow(0.2rem 0.4rem $neutral-7);

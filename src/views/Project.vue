@@ -17,7 +17,7 @@ import Vue from 'vue'
 import { Projects } from '@/data/projects'
 import { Project } from '@/interfaces/project'
 
-const findProject = (slug: string): Project => {
+const findProject = (slug: string): any => {
   return Projects.find(project => {
     return project.slug === slug
   })
