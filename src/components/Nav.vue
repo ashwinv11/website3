@@ -1,7 +1,7 @@
 <template>
   <nav class="app__nav">
-    <router-link to="/">About</router-link>
-    <router-link to="/projects">Projects</router-link>
-    <a href="/assets/Vaswani_Ashwin_Resume.pdf">Resume</a>
+    <router-link to="/" class="italic">About</router-link>
+    <router-link to="/projects" class="italic">Projects</router-link>
+    <a href="/assets/Vaswani_Ashwin_Resume.pdf" target="_blank" class="italic">Resume</a>
   </nav>
 </template>

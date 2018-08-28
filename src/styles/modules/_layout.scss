@@ -15,6 +15,14 @@ body {
   color: $neutral-0;
 }
 
+::-webkit-scrollbar {
+  width: 1vmin;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($wine, 0.6);
+}
+
 .app {
   display: grid;
   grid-template-columns: 1fr;
@@ -38,7 +46,7 @@ body {
     margin: 0 0.6rem;
 
     &.router-link-exact-active {
-      color: $neutral-3;
+      color: $wine;
     }
 
     &:hover,

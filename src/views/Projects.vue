@@ -27,8 +27,8 @@
   &:focus,
   &:active {
     @include elevation(4);
-    background-color: $ruby;
-    border: 1px groove $ruby;
+    background-color: $garnet;
+    border: 1px groove $garnet;
 
     h4 {
       color: $neutral-0;

@@ -34,16 +34,17 @@ export default Vue.extend({
   },
 })
 </script>
+
 <style lang="scss">
 .app__footer {
   svg {
-    margin-right: 4vmin;
     filter: drop-shadow(0.2rem 0.4rem $neutral-7);
   }
 
   a {
     color: $accent;
     box-shadow: none;
+    margin-right: 4vmin;
     &:hover,
     &:focus,
     &:active {
@@ -51,7 +52,7 @@ export default Vue.extend({
       box-shadow: none;
 
       svg {
-        filter: drop-shadow(0.2rem 0.4rem $wine);
+        filter: drop-shadow(0.2rem 0.4rem $neutral-5);
       }
     }
   }
