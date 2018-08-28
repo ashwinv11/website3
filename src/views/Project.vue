@@ -17,6 +17,12 @@ import Vue from 'vue'
 import { Projects } from '@/data/projects'
 import { Project } from '@/interfaces/project'
 
+const findProject = (slug: string): Project => {
+  return Projects.find(project => {
+    return project.slug === slug
+  })
+}
+
 export default Vue.extend({
   name: 'Project',
   data: () => {
@@ -24,13 +30,15 @@ export default Vue.extend({
       project: {},
     }
   },
+  watch: {
+    $route(to, from) {
+      this.project = findProject(to.params.slug)
+    },
+  },
   beforeRouteEnter(to, from, next) {
-    const data = Projects.find(project => {
-      return project.slug === to.params.slug
-    })
     next(vm => {
       const VM = vm as any
-      VM.setData(data)
+      VM.setData(findProject(to.params.slug))
     })
   },
   methods: {
