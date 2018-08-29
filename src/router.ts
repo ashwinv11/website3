@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
+import VueAnalytics from 'vue-analytics'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
@@ -41,6 +42,14 @@ const router = new Router({
     },
     { path: '*', redirect: { name: 'home' } },
   ],
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-50628910-2',
+  debug: {
+    sendHitTask: process.env.NODE_ENV === 'production',
+  },
+  router,
 })
 
 export default router
