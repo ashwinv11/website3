@@ -61,5 +61,9 @@ a {
 
 .fa-icon {
   width: auto;
-  height: 4vmin;
+  height: 8vmin;
+
+  @include sm {
+    height: 4vmin;
+  }
 }

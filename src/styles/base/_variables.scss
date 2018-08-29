@@ -24,3 +24,15 @@ $link-accent: rgba($wine, 0.4);
 
 $global-padding: 2vmin;
 $main-padding: $global-padding + 6vmin;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

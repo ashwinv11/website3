@@ -1,7 +1,7 @@
 <template>
   <footer class="app__footer">
     <div class="app__footer-project-nav-container">
-      <router-link class="app__footer-project-nav block-link" :title="previousProject.title" v-tippy v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; Previous Project</router-link>
+      <router-link class="app__footer-project-nav block-link" :title="previousProject.title" v-tippy v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; <span>Previous Project</span></router-link>
     </div>
     <div class="app__footer-social">
       <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
@@ -21,7 +21,7 @@
       </a>
     </div>
     <div class="app__footer-project-nav-container">
-      <router-link class="app__footer-project-nav block-link" :title="nextProject.title" v-tippy v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}">Next Project &#8594;</router-link>
+      <router-link class="app__footer-project-nav block-link" :title="nextProject.title" v-tippy v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}"><span>Next Project</span> &#8594;</router-link>
     </div>
   </footer>
 </template>
@@ -110,7 +110,27 @@ export default Vue.extend({
 }
 
 .app__footer-project-nav {
-  font-size: 3vmin;
+  font-size: 10vmin;
+
+  span {
+    display: none;
+  }
+}
+
+@include sm {
+  .app__footer-project-nav {
+    font-size: 5vmin;
+  }
+}
+
+@include lg {
+  .app__footer-project-nav {
+    font-size: 3vmin;
+
+    span {
+      display: inline;
+    }
+  }
 }
 
 .app__footer-project-nav-container {
@@ -125,7 +145,11 @@ export default Vue.extend({
   justify-content: center;
 
   a {
-    margin-right: 4vmin;
+    margin: 0 3vmin;
+
+    @include sm {
+      margin: 0 2vmin;
+    }
   }
 
   svg {

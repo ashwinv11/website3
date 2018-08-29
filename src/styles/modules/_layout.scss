@@ -37,13 +37,13 @@ body {
 
 .app__nav {
   grid-area: header;
-  font-size: 4vmin;
+  font-size: 6vmin;
   padding: $global-padding;
   display: flex;
   justify-content: flex-end;
 
   a {
-    margin: 0 2vmin;
+    margin: 0 4vmin;
 
     &.router-link-active {
       color: $wine;
@@ -53,6 +53,14 @@ body {
     &:focus,
     &:active {
       color: $neutral-1;
+    }
+  }
+
+  @include sm {
+    font-size: 4vmin;
+
+    a {
+      margin: 0 2vmin;
     }
   }
 }
