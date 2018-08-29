@@ -3,4 +3,6 @@ export interface Project {
   date: string
   slug: string
   body: string
+  imageFile?: string
+  imageAlt?: string
 }

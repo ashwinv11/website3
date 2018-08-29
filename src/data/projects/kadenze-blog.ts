@@ -22,4 +22,6 @@ export const KadBlog: Project = {
          I also reworked our asset loading and database queries, helping improve performance.
          This, coupled with switching our hosting providers, helped bring down
          the Time to First Interactive (TTFI) by up to 600%.</p>`,
+  imageFile: 'kadblog-featured.png',
+  imageAlt: `Screenshot of Kadenze Blog Website 2017`,
 }

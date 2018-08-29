@@ -9,4 +9,7 @@ export const DigitalReflections: Project = {
         of yourself. This breaks down the dichotomy between the physical and
         digital world, creating another reality. Wave your hands and make some
         noise to see your reflection change.</p>`,
+  imageFile: 'digital-reflections-featured.jpg',
+  imageAlt: `Viewer looking into a double sided mirror, behind one side is a
+            screen with a digital representation of one's self`,
 }
