@@ -70,7 +70,7 @@ img {
   z-index: -1;
   top: 0;
   right: 0;
-  opacity: 0.4;
+  opacity: 0.2;
   height: 40vmin;
 }
 </style>
