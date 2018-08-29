@@ -23,5 +23,6 @@ export const AppMeta: any = {
       content: 'https://ashwinvaswani.com/images/ashwin-vaswani-glitch.png',
     },
     { name: 'og:description', content: synopsis },
+    { name: 'description', content: synopsis },
   ],
 }
