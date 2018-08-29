@@ -1,7 +1,7 @@
 <template>
   <footer class="app__footer">
     <span class="app__footer-project-nav-container">
-      <router-link class="app__footer-project-nav block-link" v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; {{previousProject.title}}</router-link>
+      <router-link class="app__footer-project-nav block-link" :title="previousProject.title" v-tippy v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; Previous Project</router-link>
     </span>
     <div class="app__footer-social">
       <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
@@ -21,7 +21,7 @@
       </a>
     </div>
     <span class="app__footer-project-nav-container">
-      <router-link class="app__footer-project-nav block-link" v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}">{{nextProject.title}} &#8594;</router-link>
+      <router-link class="app__footer-project-nav block-link" :title="nextProject.title" v-tippy v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}">Next Project &#8594;</router-link>
     </span>
   </footer>
 </template>
@@ -34,6 +34,15 @@ import 'vue-awesome/icons/brands/github'
 import 'vue-awesome/icons/brands/linkedin'
 import 'vue-awesome/icons/brands/instagram'
 import 'vue-awesome/icons/brands/soundcloud'
+import VueTippy from 'vue-tippy'
+
+Vue.use(VueTippy, {
+  animateFill: false,
+  animation: 'shift-toward',
+  theme: 'footer',
+  size: 'large',
+  performance: true,
+})
 
 import { Projects } from '@/data/projects'
 import { Project } from '@/interfaces/project'
