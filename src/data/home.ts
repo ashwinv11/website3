@@ -10,3 +10,18 @@ export const Data: object = {
         <span class="italic">Web Engineer</span> at
         <span class="italic">Kadenze</span>.`,
 }
+
+const synopsis = `colorful. creative. coder. Ashwin Vaswani is a Software Engineer based in Los Angeles, California. Proficient in languages like Ruby, JavaScript, and PHP, he's interested in modern full stack web development and solving human problems through code.`
+
+export const AppMeta: any = {
+  title: 'Ashwin Vaswani',
+  meta: [
+    { name: 'og:title', content: 'Ashwin Vaswani' },
+    { name: 'og:url', content: 'https://ashwinvaswani.com' },
+    {
+      name: 'og:image',
+      content: 'https://ashwinvaswani.com/images/ashwin-vaswani-glitch.png',
+    },
+    { name: 'og:description', content: synopsis },
+  ],
+}

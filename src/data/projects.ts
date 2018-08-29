@@ -18,3 +18,7 @@ export const Projects: Project[] = [
   DAE15,
   Aries,
 ]
+
+export const ProjectsMeta: any = {
+  title: 'Ashwin Vaswani // Projects',
+}

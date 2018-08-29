@@ -33,10 +33,15 @@ export default Vue.extend({
       project: {} as Project,
     }
   },
+  metaInfo() {
+    const vm = this as any
+    return {
+      title: `Ashwin Vaswani // ${vm.project.title}`,
+    }
+  },
   watch: {
     $route(to, from) {
       this.project = findProject(to.params.slug)
-      this.updateTitle()
     },
   },
   beforeRouteEnter(to, from, next) {
@@ -53,10 +58,6 @@ export default Vue.extend({
   methods: {
     setData(data: Project): void {
       this.project = data
-      this.updateTitle()
-    },
-    updateTitle(): void {
-      document.title = `Ashwin Vaswani // ${this.project.title}`
     },
   },
 })

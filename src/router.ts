@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Meta from 'vue-meta'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
+Vue.use(Meta)
 
 const router = new Router({
   mode: 'history',
@@ -12,16 +14,10 @@ const router = new Router({
       path: '/',
       name: 'home',
       component: Home,
-      meta: {
-        title: 'Ashwin Vaswani',
-      },
     },
     {
       path: '/projects',
       name: 'projects',
-      meta: {
-        title: 'Ashwin Vaswani // Projects',
-      },
       // route level code-splitting
       // this generates a separate chunk (projects.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -45,14 +41,6 @@ const router = new Router({
     },
     { path: '*', redirect: { name: 'home' } },
   ],
-})
-
-router.afterEach((to: any, from: any) => {
-  Vue.nextTick(() => {
-    if (to.meta.title) {
-      document.title = to.meta.title
-    }
-  })
 })
 
 export default router

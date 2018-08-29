@@ -38,9 +38,10 @@
 </style>
 
 <script lang="ts">
-import { Projects } from '@/data/projects'
+import { Projects, ProjectsMeta } from '@/data/projects'
 
 export default {
   projects: Projects,
+  metaInfo: ProjectsMeta,
 }
 </script>
