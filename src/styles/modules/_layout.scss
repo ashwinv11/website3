@@ -43,9 +43,9 @@ body {
   justify-content: flex-end;
 
   a {
-    margin: 0 0.6rem;
+    margin: 0 2vmin;
 
-    &.router-link-exact-active {
+    &.router-link-active {
       color: $wine;
     }
 

@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <Nav />
     <main class="app__content">
-      <transition name="slide-right-fade" mode="out-in">
+      <transition appear name="slide-right-fade" mode="out-in">
         <router-view />
       </transition>
     </main>

@@ -1,8 +1,8 @@
 <template>
   <footer class="app__footer">
-    <span class="app__footer-project-nav-container">
+    <div class="app__footer-project-nav-container">
       <router-link class="app__footer-project-nav block-link" :title="previousProject.title" v-tippy v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; Previous Project</router-link>
-    </span>
+    </div>
     <div class="app__footer-social">
       <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
         <icon name="envelope"></icon>
@@ -20,9 +20,9 @@
         <icon name="brands/soundcloud"></icon>
       </a>
     </div>
-    <span class="app__footer-project-nav-container">
+    <div class="app__footer-project-nav-container">
       <router-link class="app__footer-project-nav block-link" :title="nextProject.title" v-tippy v-if="nextProject" :to="{ name: 'project', params: { slug: nextProject.slug }}">Next Project &#8594;</router-link>
-    </span>
+    </div>
   </footer>
 </template>
 
@@ -101,25 +101,28 @@ export default Vue.extend({
   }
 }
 
+.app__footer-project-nav-container:first-child .app__footer-project-nav {
+  margin: 0 auto 0 2vmin;
+}
+
+.app__footer-project-nav-container:last-child .app__footer-project-nav {
+  margin: 0 2vmin 0 auto;
+}
+
 .app__footer-project-nav {
   font-size: 3vmin;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 24vmin;
 }
 
 .app__footer-project-nav-container {
-  width: 32vmin;
-  min-width: 0;
-
-  &:last-of-type {
-    text-align: right;
-  }
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .app__footer-social {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   a {
     margin-right: 4vmin;

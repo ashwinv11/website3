@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article :key="project.slug">
     <div v-if="!project">
       Loading...
     </div>
@@ -25,7 +25,7 @@ const findProject = (slug: string): any => {
 
 export default Vue.extend({
   name: 'Project',
-  data: () => {
+  data() {
     return {
       project: {},
     }
