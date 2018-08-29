@@ -70,7 +70,10 @@ body {
   grid-area: main;
   overflow-x: hidden;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .app__footer {

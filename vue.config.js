@@ -1,7 +1,10 @@
 const path = require('path')
+const ScriptExtWebpackPlugin = require('script-ext-html-webpack-plugin')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 module.exports = {
+  parallel: true,
+  productionSourceMap: false,
   css: {
     loaderOptions: {
       // pass options to sass-loader
@@ -11,6 +14,19 @@ module.exports = {
         data: `@import "@/styles/globals.scss";`,
       },
     },
+  },
+  chainWebpack: config => {
+    if (process.env.NODE_ENV !== 'production') return
+
+    config
+      .plugin('script-ext')
+      .use(ScriptExtWebpackPlugin, [
+        {
+          sync: 'app.js',
+          defaultAttribute: 'defer',
+        },
+      ])
+      .after('html')
   },
   configureWebpack: config => {
     if (process.env.NODE_ENV !== 'production') return
