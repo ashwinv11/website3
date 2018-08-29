@@ -7,7 +7,9 @@
     <div v-else>
       <h1>{{project.title}}</h1>
       <h3>{{project.date}}</h3>
-      <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
+      <transition appear name="fade">
+        <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
+      </transition>
       <div v-html="project.body"></div>
     </div>
   </article>
@@ -34,6 +36,7 @@ export default Vue.extend({
   watch: {
     $route(to, from) {
       this.project = findProject(to.params.slug)
+      this.updateTitle()
     },
   },
   beforeRouteEnter(to, from, next) {
@@ -50,6 +53,10 @@ export default Vue.extend({
   methods: {
     setData(data: Project): void {
       this.project = data
+      this.updateTitle()
+    },
+    updateTitle(): void {
+      document.title = `Ashwin Vaswani // ${this.project.title}`
     },
   },
 })
@@ -58,11 +65,8 @@ export default Vue.extend({
 <style scoped lang="scss">
 article {
   position: relative;
+  height: 100%;
 }
-
-// h1 {
-//   mix-blend-mode: color-dodge;
-// }
 
 img {
   @include border-radius();

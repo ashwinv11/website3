@@ -4,19 +4,19 @@
       <router-link class="app__footer-project-nav block-link" :title="previousProject.title" v-tippy v-if="previousProject" :to="{ name: 'project', params: { slug: previousProject.slug }}" >&#8592; <span>Previous Project</span></router-link>
     </div>
     <div class="app__footer-social">
-      <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" class="block-link">
+      <a href="mailto:ashwin@vaswani.us?subject=Hey There Ashwin!" title="Email" class="block-link">
         <icon name="envelope"></icon>
       </a>
-      <a href="https://github.com/ashwinv11" class="block-link" target="_blank">
+      <a href="https://github.com/ashwinv11" title="Github" class="block-link" target="_blank">
         <icon name="brands/github"></icon>
       </a>
-      <a href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410" class="block-link" target="_blank">
+      <a href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410" title="Linkedin" class="block-link" target="_blank">
         <icon name="brands/linkedin"></icon>
       </a>
-      <a href="https://instagram.com/ashwinv11" class="block-link" target="_blank">
+      <a href="https://instagram.com/ashwinv11" title="Instagram" class="block-link" target="_blank">
         <icon name="brands/instagram"></icon>
       </a>
-      <a href="https://soundcloud.com/aries-official-music/" class="block-link" target="_blank">
+      <a href="https://soundcloud.com/aries-official-music/" title="Soundcloud" class="block-link" target="_blank">
         <icon name="brands/soundcloud"></icon>
       </a>
     </div>

@@ -9,8 +9,8 @@
 <style lang="scss">
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30vmin, 1fr));
-  grid-auto-rows: minmax(30vmin, auto);
+  grid-template-columns: repeat(auto-fill, minmax(40vmin, 1fr));
+  grid-auto-rows: minmax(40vmin, auto);
   grid-gap: 1rem;
 }
 
