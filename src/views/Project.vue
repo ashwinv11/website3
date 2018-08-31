@@ -7,9 +7,7 @@
     <div v-else>
       <h1>{{project.title}}</h1>
       <h3>{{project.date}}</h3>
-      <transition appear name="fade">
-        <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
-      </transition>
+      <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
       <div v-html="project.body"></div>
     </div>
   </article>
