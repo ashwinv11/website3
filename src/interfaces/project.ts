@@ -17,6 +17,10 @@ export enum TechTag {
   postgres = 'PostgreSQL',
   mongo = 'MongoDB',
   solidus = 'Solidus',
+  vue = 'Vue.js',
+  knockout = 'Knockout.js',
+  docker = 'Docker',
+  webpack = 'Webpack',
 }
 
 export interface Project {
