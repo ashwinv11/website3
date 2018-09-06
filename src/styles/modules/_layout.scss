@@ -18,6 +18,10 @@ body {
 @supports not (-webkit-overflow-scrolling: touch) {
   ::-webkit-scrollbar {
     width: 1vmin;
+
+    @include md {
+      width: 0.8vmin;
+    }
   }
 
   ::-webkit-scrollbar-thumb {
