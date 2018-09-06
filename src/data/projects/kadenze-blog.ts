@@ -1,9 +1,10 @@
-import { Project, Category } from '@/interfaces'
+import { Project, Category, TechTag } from '@/interfaces'
 
 export const KadBlog: Project = {
   title: 'Kadenze Blog',
   slug: 'kadenze-blog',
   category: Category.work,
+  tags: [TechTag.wp, TechTag.php],
   date: 'Jun 22, 2016',
   body: `<p>Kadenze brings together educators, artists, and engineers from leading
          universities across the globe to provide world-class education in the

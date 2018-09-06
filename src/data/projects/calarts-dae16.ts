@@ -1,9 +1,10 @@
-import { Project, Category } from '@/interfaces'
+import { Project, Category, TechTag } from '@/interfaces'
 
 export const DAE16: Project = {
   slug: 'calarts-dae16',
   title: 'CalArts Digital Arts Expo 2016',
   category: Category.work,
+  tags: [TechTag.wp, TechTag.php],
   date: 'May 11, 2016',
   body: `<p>I lead development on the website for CalArts' Digital Arts Expo for 2016.
         This was also created in Wordpress. Check it out

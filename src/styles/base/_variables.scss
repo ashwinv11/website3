@@ -1,7 +1,10 @@
+//
+// Color Pallete
+//
+
 $white: #ffffff;
 $black: #000000;
 
-// Primary colors
 $red: #d54848;
 $ruby: #d13737;
 $scarlet: #be2c2c;
@@ -22,8 +25,9 @@ $neutral-9: #151515;
 $accent: $ruby;
 $link-accent: rgba($wine, 0.4);
 
-$global-padding: 2vmin;
-$main-padding: $global-padding + 6vmin;
+//
+// Font Definitions
+//
 
 $body-font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 $heading-font-family: 'IBM Plex Mono', monospace;
@@ -37,6 +41,10 @@ $h5-size: 3vmin;
 $p-size: 6vmin;
 $p-line-height: 8vmin;
 
+//
+// Breakpoints
+//
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -48,3 +56,10 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+//
+// Misc
+//
+
+$global-padding: 2vmin;
+$main-padding: $global-padding + 6vmin;

@@ -1,9 +1,10 @@
-import { Project, Category } from '@/interfaces'
+import { Project, Category, TechTag } from '@/interfaces'
 
 export const Censored: Project = {
   slug: 'censored',
   title: 'censored',
   category: Category.art,
+  tags: [TechTag.d3, TechTag.p5, TechTag.mongo],
   date: 'May 11, 2016',
   body: `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UGsyOfj2iNM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <p>Censored is an interactive website that visualizes statistics on
