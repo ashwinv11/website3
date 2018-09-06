@@ -49,6 +49,7 @@ Vue.use(VueAnalytics, {
   debug: {
     sendHitTask: process.env.NODE_ENV === 'production',
   },
+  set: [{ field: 'anonymizeIp', value: true }],
   router,
 })
 
