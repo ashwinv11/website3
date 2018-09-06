@@ -93,11 +93,15 @@ img {
   z-index: -1;
   top: 0;
   right: 0;
-  opacity: 0.2;
   height: 40vmin;
+  opacity: 0;
 
   &.img--tall {
     height: 60vmin;
+  }
+
+  @include md {
+    opacity: 0.2;
   }
 }
 </style>
