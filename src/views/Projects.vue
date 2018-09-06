@@ -2,7 +2,10 @@
   <div class="projects app__inner-content">
     <router-link v-for="project in $options.projects" :key="project.slug" :to="{ name: 'project', params: { slug: project.slug }}" class="projects__item block-link">
       <h4>{{project.title}}</h4>
-      <h5 class="lowercase">{{project.category}}</h5>
+      <div class="projects__item-meta lowercase">
+        <h5>{{project.category}}</h5>
+        <h5>{{project.date}}</h5>
+      </div>
     </router-link>
   </div>
 </template>
@@ -33,9 +36,6 @@
   }
 
   h5 {
-    position: absolute;
-    bottom: 4vmin;
-    right: 4vmin;
     margin: 0;
     font-family: $body-font-family;
     font-size: $h3-size;
@@ -72,6 +72,13 @@
       font-size: $h4-size;
     }
   }
+}
+
+.projects__item-meta {
+  position: absolute;
+  bottom: 4vmin;
+  right: 4vmin;
+  text-align: right;
 }
 </style>
 
