@@ -1,4 +1,5 @@
-import { Project, Category, TechTag } from '@/interfaces'
+import { Category, TechTag } from '@/enums'
+import { Project } from '@/interfaces'
 
 export const Tireget: Project = {
   slug: 'tireget',

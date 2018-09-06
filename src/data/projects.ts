@@ -1,5 +1,6 @@
 import { Project } from '@/interfaces'
 import {
+  Cogni,
   Kadenze,
   Tireget,
   MTIID,
@@ -13,6 +14,7 @@ import {
 } from '@/data/projects/index'
 
 export const Projects: Project[] = [
+  Cogni,
   Kadenze,
   Tireget,
   MTIID,

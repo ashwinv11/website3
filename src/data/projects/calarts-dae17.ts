@@ -1,4 +1,5 @@
-import { Project, Category, TechTag } from '@/interfaces'
+import { Category, TechTag } from '@/enums'
+import { Project } from '@/interfaces'
 
 export const DAE17: Project = {
   slug: 'calarts-dae17',

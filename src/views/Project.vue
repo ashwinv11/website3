@@ -8,7 +8,7 @@
       <h1>{{project.title}}</h1>
       <h3>{{project.date}} // {{project.category}}</h3>
       <h4 v-if="tags !== ''">Tech Used &#8594; {{tags}}</h4>
-      <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
+      <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt" :class="imgClass">
       <div v-html="project.body"></div>
       <h3 v-if="project.link">
         <a :href="project.link" target="_blank">Link &#8594;</a>
@@ -56,6 +56,11 @@ export default Vue.extend({
     imageURL(): string {
       return `${process.env.BASE_URL}images/${this.project.imageFile}`
     },
+    imgClass(): object {
+      return this.project.meta === undefined
+        ? {}
+        : { 'img--tall': this.project.meta.tallImage }
+    },
     tags(): string {
       return this.project.tags === undefined
         ? ''
@@ -89,5 +94,9 @@ img {
   right: 0;
   opacity: 0.2;
   height: 40vmin;
+
+  &.img--tall {
+    height: 60vmin;
+  }
 }
 </style>

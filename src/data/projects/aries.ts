@@ -1,4 +1,5 @@
-import { Project, Category } from '@/interfaces'
+import { Category } from '@/enums'
+import { Project } from '@/interfaces'
 
 export const Aries: Project = {
   slug: 'aries-music',

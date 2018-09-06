@@ -1,4 +1,5 @@
-import { Project, Category, TechTag } from '@/interfaces'
+import { Category, TechTag } from '@/enums'
+import { Project } from '@/interfaces'
 
 export const KadBlog: Project = {
   title: 'Kadenze Blog',
@@ -9,6 +10,7 @@ export const KadBlog: Project = {
   body: `<p>Kadenze brings together educators, artists, and engineers from leading
          universities across the globe to provide world-class education in the
          fields of art and creative technology.</p>
+
          <p>I lead development on the company's
          <a href="https://blog.kadenze.com/" target="_blank">Wordpress blog</a>.
          Over the years it has gone through 3 major design iterations and has
@@ -18,6 +20,7 @@ export const KadBlog: Project = {
          the user's visited blog categories, so that our web app's API could
          show users relevant courses based on their reading interests.
          I developed an email tracking system using Sendgrid's API.</p>
+
          <p>Besides development, I also provisioned servers, created staging
          enviornments, added version control via Git, documented our development
          and deployment process, and installed a CDN and SSL using Let's Encrypt.

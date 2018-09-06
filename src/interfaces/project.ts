@@ -1,27 +1,4 @@
-export enum Category {
-  art = 'Art',
-  work = 'Work',
-}
-
-export enum TechTag {
-  rails = 'Ruby On Rails',
-  wp = 'Wordpress',
-  php = 'PHP',
-  js = 'JavaScript',
-  ts = 'TypeScript',
-  sass = 'SASS',
-  arduino = 'Arduino',
-  of = 'openframeworks',
-  d3 = 'D3.js',
-  p5 = 'p5.js',
-  postgres = 'PostgreSQL',
-  mongo = 'MongoDB',
-  solidus = 'Solidus',
-  vue = 'Vue.js',
-  knockout = 'Knockout.js',
-  docker = 'Docker',
-  webpack = 'Webpack',
-}
+import { Category, TechTag } from '@/enums'
 
 export interface Project {
   title: string
@@ -33,4 +10,5 @@ export interface Project {
   link?: string
   imageFile?: string
   imageAlt?: string
+  meta?: any
 }
