@@ -10,6 +10,9 @@
       <h4 v-if="tags !== ''">Tech Used &#8594; {{tags}}</h4>
       <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
       <div v-html="project.body"></div>
+      <h3 v-if="project.link">
+        <a :href="project.link" target="_blank">Link &#8594;</a>
+      </h3>
     </div>
   </article>
 </template>

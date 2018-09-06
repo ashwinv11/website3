@@ -38,6 +38,7 @@ module.exports = {
           routes: [
             '/',
             '/projects',
+            '/projects/tireget',
             '/projects/mtiid',
             '/projects/calarts-dae17',
             '/projects/kadenze-blog',

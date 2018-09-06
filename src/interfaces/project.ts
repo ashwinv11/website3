@@ -9,13 +9,14 @@ export enum TechTag {
   php = 'PHP',
   js = 'JavaScript',
   ts = 'TypeScript',
-  scss = 'SASS',
+  sass = 'SASS',
   arduino = 'Arduino',
   of = 'openframeworks',
   d3 = 'D3.js',
   p5 = 'p5.js',
   postgres = 'PostgreSQL',
   mongo = 'MongoDB',
+  solidus = 'Solidus',
 }
 
 export interface Project {
@@ -25,6 +26,7 @@ export interface Project {
   tags?: TechTag[]
   slug: string
   body: string
+  link?: string
   imageFile?: string
   imageAlt?: string
 }
