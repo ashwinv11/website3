@@ -13,3 +13,20 @@ export default {
   json: Data,
 }
 </script>
+
+<style lang="scss">
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  @include md {
+    height: auto;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+</style>
