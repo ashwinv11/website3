@@ -16,3 +16,13 @@
 .lowercase {
   text-transform: lowercase;
 }
+
+iframe {
+  max-height: 45vmin;
+  max-width: 80vmin;
+
+  @include sm {
+    max-height: auto;
+    max-width: auto;
+  }
+}

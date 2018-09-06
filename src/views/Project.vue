@@ -88,6 +88,7 @@ h4 {
 
 img {
   @include border-radius();
+  @include transition(0.2s);
   position: absolute;
   z-index: -1;
   top: 0;

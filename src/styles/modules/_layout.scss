@@ -15,12 +15,14 @@ body {
   color: $neutral-0;
 }
 
-::-webkit-scrollbar {
-  width: 1vmin;
-}
+@supports not (-webkit-overflow-scrolling: touch) {
+  ::-webkit-scrollbar {
+    width: 1vmin;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba($wine, 0.6);
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba($wine, 0.6);
+  }
 }
 
 .app {
