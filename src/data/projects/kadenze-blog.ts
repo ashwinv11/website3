@@ -1,9 +1,10 @@
-import { Project } from '@/interfaces/project'
+import { Project, Category } from '@/interfaces'
 
 export const KadBlog: Project = {
   title: 'Kadenze Blog',
-  date: 'Jun 22, 2016',
   slug: 'kadenze-blog',
+  category: Category.work,
+  date: 'Jun 22, 2016',
   body: `<p>Kadenze brings together educators, artists, and engineers from leading
          universities across the globe to provide world-class education in the
          fields of art and creative technology.</p>

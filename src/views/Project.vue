@@ -4,9 +4,9 @@
       Loading...
     </div>
 
-    <div v-else>
+    <div class="app__inner-content" v-else>
       <h1>{{project.title}}</h1>
-      <h3>{{project.date}}</h3>
+      <h3>{{project.date}} // {{project.category}}</h3>
       <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt">
       <div v-html="project.body"></div>
     </div>
@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Projects } from '@/data/projects'
-import { Project } from '@/interfaces/project'
+import { Project } from '@/interfaces'
 
 const findProject = (slug: string): any => {
   return Projects.find(project => {

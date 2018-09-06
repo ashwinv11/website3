@@ -45,7 +45,7 @@ Vue.use(VueTippy, {
 })
 
 import { Projects } from '@/data/projects'
-import { Project } from '@/interfaces/project'
+import { Project } from '@/interfaces'
 
 const findProjectNavItems = (slug: string): any => {
   const projectIndex = Projects.findIndex(project => slug === project.slug)

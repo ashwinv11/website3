@@ -1,4 +1,4 @@
-import { Project } from '@/interfaces/project'
+import { Project } from '@/interfaces'
 import {
   DAE17,
   KadBlog,

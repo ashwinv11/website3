@@ -1,8 +1,9 @@
-import { Project } from '@/interfaces/project'
+import { Project, Category } from '@/interfaces'
 
 export const DAE15: Project = {
   slug: 'calarts-dae15',
   title: 'CalArts Digital Arts Expo 2015',
+  category: Category.work,
   date: 'Jul 13, 2015',
   body: `<p>I created the website for CalArts' Digital Arts Expo for 2015.
         Since the client needed to add content to the site, I created it in Wordpress.

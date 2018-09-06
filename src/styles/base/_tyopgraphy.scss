@@ -1,5 +1,5 @@
 body {
-  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  font-family: $body-font-family;
 }
 
 h1,
@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: $heading-font-family;
   font-style: italic;
   font-weight: 300;
   color: $scarlet;
@@ -16,24 +16,28 @@ h6 {
 }
 
 h1 {
-  font-size: 10vmin;
+  font-size: $h1-size;
 }
 
 h2 {
-  font-size: 8vmin;
+  font-size: $h2-size;
 }
 
 h3 {
-  font-size: 6vmin;
+  font-size: $h3-size;
 }
 
 h4 {
-  font-size: 4vmin;
+  font-size: $h4-size;
+}
+
+h5 {
+  font-size: $h5-size;
 }
 
 p {
-  font-size: 6vmin;
-  line-height: 8vmin;
+  font-size: $p-size;
+  line-height: $p-line-height;
 }
 
 i {

@@ -76,6 +76,10 @@ body {
   }
 }
 
+.app__inner-content {
+  margin-bottom: 4vmin;
+}
+
 .app__footer {
   grid-area: footer;
   padding: $global-padding;
