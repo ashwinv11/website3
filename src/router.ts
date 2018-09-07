@@ -43,7 +43,9 @@ const router = new Router({
     { path: '*', redirect: { name: 'home' } },
   ],
   scrollBehavior(to, from, savedPosition) {
-    document.getElementsByClassName('app__content')[0].scrollTo(0, 0)
+    document
+      .getElementsByClassName('app__content')[0]
+      .scrollTo({ top: 0, behavior: 'smooth' })
   },
 })
 

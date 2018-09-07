@@ -1,8 +1,3 @@
-.tippy-tooltip.footer-theme {
-  background-color: $neutral-7;
-  color: $red;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -20,6 +15,6 @@
 }
 .slide-right-fade-enter,
 .slide-right-fade-leave-to {
-  transform: translateX(2vmin);
+  transform: translateX(8vmin);
   opacity: 0;
 }
