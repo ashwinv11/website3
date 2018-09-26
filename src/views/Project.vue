@@ -4,7 +4,15 @@
       Loading...
     </div>
 
-    <div class="app__inner-content" v-else>
+    <div v-else-if="project.slug === 'photography'">
+      <h1>{{project.title}}</h1>
+      <h3>{{project.category}}</h3>
+      <div v-for="photo in photos" :key="photo.id">
+        <img :src="photo.urls.regular">
+      </div>
+    </div>
+
+    <div class="app__inner-content project" v-else>
       <h1>{{project.title}}</h1>
       <h3>{{project.date}} // {{project.category}}</h3>
       <h4 v-if="tags !== ''">Tech Used &#8594; {{tags}}</h4>
@@ -19,6 +27,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { unsplash } from '@/utils'
+import { toJson } from 'unsplash-js'
+
 import { Projects } from '@/data/projects'
 import { Project } from '@/interfaces'
 
@@ -33,6 +44,7 @@ export default Vue.extend({
   data() {
     return {
       project: {} as Project,
+      photos: [],
     }
   },
   metaInfo() {
@@ -70,6 +82,17 @@ export default Vue.extend({
   methods: {
     setData(data: Project): void {
       this.project = data
+      if (this.project.slug === 'photography') {
+        this.loadPhotos()
+      }
+    },
+    loadPhotos() {
+      unsplash.users
+        .photos('ashwinv11', 1, 10, 'latest', false)
+        .then(toJson)
+        .then((response: any) => {
+          this.photos = response
+        })
     },
   },
 })
@@ -86,22 +109,24 @@ h4 {
   line-height: $h3-size;
 }
 
-img {
-  @include border-radius();
-  @include transition(0.2s);
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  height: 40vmin;
-  opacity: 0;
+.project {
+  img {
+    @include border-radius();
+    @include transition(0.2s);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 40vmin;
+    opacity: 0;
 
-  &.img--tall {
-    height: 60vmin;
-  }
+    &.img--tall {
+      height: 60vmin;
+    }
 
-  @include md {
-    opacity: 0.2;
+    @include md {
+      opacity: 0.2;
+    }
   }
 }
 </style>
