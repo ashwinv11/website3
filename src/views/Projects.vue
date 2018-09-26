@@ -32,7 +32,7 @@
 
   h4 {
     font-size: $h2-size;
-    word-break: break-word;
+    hyphens: auto;
   }
 
   h5 {
