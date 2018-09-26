@@ -19,6 +19,7 @@
     "vue-analytics": "^5.16.0",
     "vue-awesome": "^3.1.0",
     "vue-meta": "^1.5.3",
+    "vue-progressive-image": "^3.1.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

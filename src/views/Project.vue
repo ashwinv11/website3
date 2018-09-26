@@ -4,11 +4,12 @@
       Loading...
     </div>
 
-    <div v-else-if="project.slug === 'photography'">
+    <div class="app__inner-content project--photography"v-else-if="project.slug === 'photography'">
       <h1>{{project.title}}</h1>
-      <h3>{{project.category}}</h3>
-      <div v-for="photo in photos" :key="photo.id">
-        <img :src="photo.urls.regular">
+      <h3>{{project.date}} // {{project.category}}</h3>
+      <h4 v-html="project.body"></h4>
+      <div class="project__photo" v-for="photo in photos" :key="photo.id">
+        <progressive-img :src="photo.urls.regular" :placeholder="photo.urls.thumb" />
       </div>
     </div>
 
@@ -45,6 +46,7 @@ export default Vue.extend({
     return {
       project: {} as Project,
       photos: [],
+      currentPage: 1,
     }
   },
   metaInfo() {
@@ -56,6 +58,7 @@ export default Vue.extend({
   watch: {
     $route(to, from) {
       this.project = findProject(to.params.slug)
+      this.loadPhotos()
     },
   },
   beforeRouteEnter(to, from, next) {
@@ -63,6 +66,9 @@ export default Vue.extend({
       const VM = vm as any
       VM.setData(findProject(to.params.slug))
     })
+  },
+  mounted() {
+    this.scroll()
   },
   computed: {
     imageURL(): string {
@@ -82,17 +88,29 @@ export default Vue.extend({
   methods: {
     setData(data: Project): void {
       this.project = data
+      this.loadPhotos()
+    },
+    loadPhotos(): void {
       if (this.project.slug === 'photography') {
-        this.loadPhotos()
+        unsplash.users
+          .photos('ashwinv11', this.currentPage, 5, 'latest', false)
+          .then(toJson)
+          .then((response: any) => {
+            this.photos = this.photos.concat(response)
+          })
       }
     },
-    loadPhotos() {
-      unsplash.users
-        .photos('ashwinv11', 1, 10, 'latest', false)
-        .then(toJson)
-        .then((response: any) => {
-          this.photos = response
-        })
+    scroll() {
+      const el = document.getElementsByClassName(
+        'app__content',
+      )[0] as HTMLElement
+
+      el.onscroll = () => {
+        if (el.scrollTop === el.scrollHeight - el.offsetHeight) {
+          this.currentPage++
+          this.loadPhotos()
+        }
+      }
     },
   },
 })
@@ -107,6 +125,15 @@ article {
 h4 {
   color: $neutral-2;
   line-height: $h3-size;
+}
+
+.project__photo {
+  margin: $main-padding auto;
+  text-align: center;
+
+  &:last-of-type {
+    margin: 0 auto;
+  }
 }
 
 .project {
