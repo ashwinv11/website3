@@ -2,6 +2,7 @@ import { Project } from '@/interfaces'
 import {
   Cogni,
   Kadenze,
+  Photography,
   Tireget,
   MTIID,
   DAE17,
@@ -16,6 +17,7 @@ import {
 export const Projects: Project[] = [
   Cogni,
   Kadenze,
+  Photography,
   Tireget,
   MTIID,
   DAE17,
