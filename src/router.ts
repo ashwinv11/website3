@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
+import VueProgressiveImage from 'vue-progressive-image'
 import VueAnalytics from 'vue-analytics'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
 Vue.use(Meta)
+Vue.use(VueProgressiveImage)
 
 const router = new Router({
   mode: 'history',
