@@ -1,10 +1,10 @@
 <template>
-  <article :key="project.slug">
+  <article :key="project.slug" class="project">
     <div v-if="!project">
       Loading...
     </div>
 
-    <div class="app__inner-content project--photography"v-else-if="project.slug === 'photography'">
+    <div class="app__inner-content project__content--photography"v-else-if="project.slug === 'photography'">
       <h1>{{project.title}}</h1>
       <h3>{{project.date}} // {{project.category}}</h3>
       <h4 v-html="project.body"></h4>
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="app__inner-content project" v-else>
+    <div class="app__inner-content project__content" v-else>
       <h1>{{project.title}}</h1>
       <h3>{{project.date}} // {{project.category}}</h3>
       <h4 v-if="tags !== ''">Tech Used &#8594; {{tags}}</h4>
@@ -40,12 +40,21 @@ const findProject = (slug: string): any => {
   })
 }
 
+const debounce = (func: () => void, wait = 50) => {
+  let h: any
+  return () => {
+    clearTimeout(h)
+    h = setTimeout(() => func(), wait)
+  }
+}
+
 export default Vue.extend({
   name: 'Project',
   data() {
     return {
       project: {} as Project,
       photos: [],
+      canLoadMore: true,
       currentPage: 1,
     }
   },
@@ -91,11 +100,16 @@ export default Vue.extend({
       this.loadPhotos()
     },
     loadPhotos(): void {
-      if (this.project.slug === 'photography') {
+      if (this.project.slug === 'photography' && this.canLoadMore) {
+        const perPage = 5
+
         unsplash.users
-          .photos('ashwinv11', this.currentPage, 5, 'latest', false)
+          .photos('ashwinv11', this.currentPage, perPage, 'latest', false)
           .then(toJson)
           .then((response: any) => {
+            if (response.length !== perPage) {
+              this.canLoadMore = false
+            }
             this.photos = this.photos.concat(response)
           })
       }
@@ -105,19 +119,22 @@ export default Vue.extend({
         'app__content',
       )[0] as HTMLElement
 
-      el.onscroll = () => {
-        if (el.scrollTop === el.scrollHeight - el.offsetHeight) {
+      el.onscroll = debounce(() => {
+        if (
+          el.scrollTop >= el.scrollHeight - el.offsetHeight - 1000 &&
+          this.canLoadMore
+        ) {
           this.currentPage++
           this.loadPhotos()
         }
-      }
+      }, 300)
     },
   },
 })
 </script>
 
 <style scoped lang="scss">
-article {
+.project {
   position: relative;
   height: 100%;
 }
@@ -136,7 +153,7 @@ h4 {
   }
 }
 
-.project {
+.project__content {
   img {
     @include border-radius();
     @include transition(0.2s);
