@@ -44,7 +44,7 @@ body {
 .app__nav {
   grid-area: header;
   font-size: 6vmin;
-  padding: $global-padding;
+  padding: 4.5vmin $global-padding;
   display: flex;
   justify-content: flex-end;
 
@@ -63,6 +63,7 @@ body {
   }
 
   @include sm {
+    padding: $global-padding;
     font-size: 4vmin;
 
     a {
