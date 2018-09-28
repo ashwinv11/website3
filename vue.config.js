@@ -40,6 +40,7 @@ module.exports = {
             '/projects',
             '/projects/cogni',
             '/projects/kadenze',
+            '/projects/photography',
             '/projects/tireget',
             '/projects/mtiid',
             '/projects/calarts-dae17',
