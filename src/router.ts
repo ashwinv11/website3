@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import Router, { RouterOptions } from 'vue-router'
 import Meta from 'vue-meta'
 import VueProgressiveImage from 'vue-progressive-image'
 import VueAnalytics from 'vue-analytics'
@@ -49,7 +49,7 @@ const router = new Router({
       .getElementsByClassName('app__content')[0]
       .scrollTo({ top: 0, behavior: 'smooth' })
   },
-})
+} as RouterOptions)
 
 Vue.use(VueAnalytics, {
   id: 'UA-50628910-2',
