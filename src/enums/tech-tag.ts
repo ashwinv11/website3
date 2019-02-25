@@ -23,4 +23,6 @@ export enum TechTag {
   plaid = 'Plaid',
   sendgrid = 'Sendgrid',
   heroku = 'Heroku',
+  angular6 = 'Angular 6',
+  foundation = 'Foundation',
 }

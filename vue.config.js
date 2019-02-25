@@ -38,6 +38,7 @@ module.exports = {
           routes: [
             '/',
             '/projects',
+            '/projects/cg-port-con',
             '/projects/cogni',
             '/projects/kadenze',
             '/projects/photography',
