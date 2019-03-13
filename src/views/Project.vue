@@ -1,23 +1,38 @@
 <template>
   <article :key="project.slug" class="project">
-    <div v-if="!project">
-      Loading...
-    </div>
+    <div v-if="!project">Loading...</div>
 
-    <div class="app__inner-content project__content--photography"v-else-if="project.slug === 'photography'">
-      <h1>{{project.title}}</h1>
-      <h3>{{project.date}} // {{project.category}}</h3>
+    <div
+      class="app__inner-content project__content--photography"
+      v-else-if="project.slug === 'photography'"
+    >
+      <h1>{{ project.title }}</h1>
+      <h3>{{ project.date }} // {{ project.category }}</h3>
       <h4 v-html="project.body"></h4>
-      <div class="project__photo" v-for="photo in photos" :key="photo.id">
-        <progressive-img :src="photo.urls.regular" :placeholder="photo.urls.thumb" />
-      </div>
+
+      <masonry
+        :cols="{ default: 3, 768: 2, 576: 1 }"
+        :gutter="{ default: '2vmin' }"
+      >
+        <div class="project__photo" v-for="photo in photos" :key="photo.id">
+          <progressive-img
+            :src="photo.urls.regular"
+            :placeholder="photo.urls.thumb"
+          />
+        </div>
+      </masonry>
     </div>
 
     <div class="app__inner-content project__content" v-else>
-      <h1>{{project.title}}</h1>
-      <h3>{{project.date}} // {{project.category}}</h3>
-      <h4 v-if="tags !== ''">Tech Used &#8594; {{tags}}</h4>
-      <img v-if="project.imageAlt" :src="imageURL" :alt="project.imageAlt" :class="imgClass">
+      <h1>{{ project.title }}</h1>
+      <h3>{{ project.date }} // {{ project.category }}</h3>
+      <h4 v-if="tags !== ''">Tech Used &#8594; {{ tags }}</h4>
+      <img
+        v-if="project.imageAlt"
+        :src="imageURL"
+        :alt="project.imageAlt"
+        :class="imgClass"
+      />
       <div v-html="project.body"></div>
       <h3 v-if="project.link">
         <a :href="project.link" target="_blank">Link &#8594;</a>
@@ -28,11 +43,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import VueMasonry from 'vue-masonry-css'
 import { unsplash } from '@/utils'
 import { toJson } from 'unsplash-js'
 
 import { Projects } from '@/data/projects'
 import { Project } from '@/interfaces'
+
+Vue.use(VueMasonry)
 
 const findProject = (slug: string): any => {
   return Projects.find(project => {
@@ -101,7 +119,7 @@ export default Vue.extend({
     },
     loadPhotos(): void {
       if (this.project.slug === 'photography' && this.canLoadMore) {
-        const perPage = 5
+        const perPage = 10
 
         unsplash.users
           .photos('ashwinv11', this.currentPage, perPage, 'latest', false)
@@ -121,13 +139,13 @@ export default Vue.extend({
 
       el.onscroll = debounce(() => {
         if (
-          el.scrollTop >= el.scrollHeight - el.offsetHeight - 1000 &&
+          el.scrollTop >= el.scrollHeight - el.offsetHeight - 800 &&
           this.canLoadMore
         ) {
           this.currentPage++
           this.loadPhotos()
         }
-      }, 300)
+      }, 100)
     },
   },
 })
@@ -145,11 +163,11 @@ h4 {
 }
 
 .project__photo {
-  margin: $main-padding auto;
   text-align: center;
+  // break-inside: avoid-column;
 
-  &:last-of-type {
-    margin: 0 auto;
+  & + .project__photo {
+    margin-top: $global-padding;
   }
 }
 
