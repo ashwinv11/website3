@@ -1,10 +1,15 @@
 <template>
   <div class="projects app__inner-content">
-    <router-link v-for="project in $options.projects" :key="project.slug" :to="{ name: 'project', params: { slug: project.slug }}" class="projects__item block-link">
-      <h4>{{project.title}}</h4>
+    <router-link
+      v-for="project in $options.projects"
+      :key="project.slug"
+      :to="{ name: 'project', params: { slug: project.slug } }"
+      class="projects__item block-link"
+    >
+      <h4>{{ project.title }}</h4>
       <div class="projects__item-meta lowercase">
-        <h5>{{project.category}}</h5>
-        <h5>{{project.date}}</h5>
+        <h5>{{ project.category }}</h5>
+        <h5>{{ project.date }}</h5>
       </div>
     </router-link>
   </div>
@@ -18,9 +23,14 @@
   grid-gap: 6vmin;
 
   @include md {
-    grid-template-columns: repeat(auto-fill, minmax(40vmin, 1fr));
-    grid-auto-rows: minmax(40vmin, auto);
+    grid-template-columns: repeat(auto-fill, minmax(39vmin, 1fr));
+    grid-auto-rows: minmax(39vmin, auto);
     grid-gap: 4vmin;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(auto-fill, minmax(32vmin, 1fr));
+    grid-auto-rows: minmax(32vmin, auto);
   }
 }
 
@@ -79,6 +89,11 @@
   bottom: 4vmin;
   right: 4vmin;
   text-align: right;
+
+  @include md {
+    bottom: 2vmin;
+    right: 2vmin;
+  }
 }
 </style>
 
