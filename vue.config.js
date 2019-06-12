@@ -38,6 +38,8 @@ module.exports = {
           routes: [
             '/',
             '/projects',
+            '/projects/biassync',
+            '/projects/pongalo',
             '/projects/cg-port-con',
             '/projects/cogni',
             '/projects/kadenze',
