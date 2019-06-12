@@ -1,5 +1,7 @@
 import { Project } from '@/interfaces'
 import {
+  Biassync,
+  Pongalo,
   CgPortCon,
   Cogni,
   Kadenze,
@@ -16,6 +18,8 @@ import {
 } from '@/data/projects/index'
 
 export const Projects: Project[] = [
+  Biassync,
+  Pongalo,
   CgPortCon,
   Cogni,
   Kadenze,
