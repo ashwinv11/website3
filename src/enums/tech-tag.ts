@@ -44,4 +44,5 @@ export enum TechTag {
   contentStack = 'Contentstack',
   oas3 = 'OpenAPI 3',
   apigee = 'Apigee',
+  graphql = 'GraphQl',
 }

@@ -10,6 +10,7 @@ export const YapstoneDisputeCenter: Project = {
     TechTag.ts,
     TechTag.cssInJs,
     TechTag.emotion,
+    TechTag.graphql,
     TechTag.aws,
     TechTag.cloudFormation,
   ],
