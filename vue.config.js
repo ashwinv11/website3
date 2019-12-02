@@ -38,6 +38,8 @@ module.exports = {
           routes: [
             '/',
             '/projects',
+            '/projects/yapstone-dispute-center',
+            '/projects/yapstone-devportal',
             '/projects/biassync',
             '/projects/pongalo',
             '/projects/cg-port-con',

@@ -15,7 +15,7 @@ export const Cogni: Project = {
     TechTag.sendgrid,
     TechTag.heroku,
   ],
-  date: 'August 5, 2018',
+  date: 'Aug 5, 2018',
   body: `<p>Cogni’s mission was to build a modern bank geared towards today’s lifestyle.
          They learned that most of the future generation's income was from part-time
          employment opportunities; that most people had trouble saving for their goals,

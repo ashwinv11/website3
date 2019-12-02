@@ -15,7 +15,7 @@ export const Kadenze: Project = {
     TechTag.docker,
     TechTag.webpack,
   ],
-  date: 'March 2, 2018',
+  date: 'Mar 2, 2018',
   body: `<p>Kadenze is an online education platform (MOOC) for the creative arts.
           The company also created a learning management software (LMS) that was used in
           multiple institutions across the globe. I worked at Kadenze as a QA Engineer

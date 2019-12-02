@@ -38,4 +38,10 @@ export enum TechTag {
   ios = 'iOS',
   android = 'Android',
   aws = 'AWS',
+  algolia = 'Algolia',
+  cloudFormation = 'CloudFormation',
+  elasticBeanstalk = 'ElasticBeanstalk',
+  contentStack = 'Contentstack',
+  oas3 = 'OpenAPI 3',
+  apigee = 'Apigee',
 }

@@ -12,7 +12,7 @@ export const Tireget: Project = {
     TechTag.js,
     TechTag.sass,
   ],
-  date: 'September 9, 2017',
+  date: 'Sep 9, 2017',
   body: `<p>I helped create an e-commerce web app with Ruby on Rails & Solidus
          for selling wholesale tires direct to the consumer.</p>
 

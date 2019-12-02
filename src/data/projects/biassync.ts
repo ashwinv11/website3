@@ -15,7 +15,7 @@ export const Biassync: Project = {
     TechTag.contentful,
     TechTag.netlify,
   ],
-  date: 'June 11, 2019',
+  date: 'Jun 11, 2019',
   body: `<p>
     BiasSync is a science-based software solution designed to help organizations
     more effectively assess and manage unconscious bias in the work environment.

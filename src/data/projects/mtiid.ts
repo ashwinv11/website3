@@ -6,7 +6,7 @@ export const MTIID: Project = {
   title: 'MTIID',
   category: Category.work,
   tags: [TechTag.wp, TechTag.php],
-  date: 'June 23, 2016',
+  date: 'Jun 23, 2016',
   body: `<p>I lead development on the website for CalArts'
         <a href="https://mtiid.calarts.edu/" target="_blank">Music
         Technology: Interaction, Intelligence & Design (MTIID)</a> program.</p>`,

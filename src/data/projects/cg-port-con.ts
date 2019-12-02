@@ -12,7 +12,7 @@ export const CgPortCon: Project = {
     TechTag.foundation,
     TechTag.sass,
   ],
-  date: 'November 3, 2018',
+  date: 'Nov 3, 2018',
   body: `<p>Capital Group is one of America's oldest and largest investment
         management organizations, with $1.87 trillion in assets under management
         as of 2019. As part of their endeavor to assist advisors, they wanted
