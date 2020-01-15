@@ -1,5 +1,6 @@
 import { Project } from '@/interfaces'
 import {
+  Obvious,
   YapstoneDisputeCenter,
   YapstoneDevPortal,
   Biassync,
@@ -20,6 +21,7 @@ import {
 } from '@/data/projects/index'
 
 export const Projects: Project[] = [
+  Obvious,
   YapstoneDisputeCenter,
   YapstoneDevPortal,
   Biassync,

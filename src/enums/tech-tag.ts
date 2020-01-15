@@ -45,4 +45,5 @@ export enum TechTag {
   oas3 = 'OpenAPI 3',
   apigee = 'Apigee',
   graphql = 'GraphQl',
+  prismic = 'Prismic',
 }
