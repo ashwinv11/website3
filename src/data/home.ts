@@ -1,7 +1,7 @@
 export const Data: object = {
   title: `Hi, I'm Ashwin`,
   body: `<span class="italic">Senior Software Engineer</span> at
-        <a href="https://www.sweetgreen.com/" target="_blank" class="italic">sweetgreen</a>,
+        <a href="https://order.sweetgreen.com/" target="_blank" class="italic">sweetgreen</a>,
         with a <span class="italic">BFA in
         <a href="https://mtiid.calarts.edu/" target="_blank">Music Technology</a>
         & the Digital Arts.</span>

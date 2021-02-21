@@ -3,7 +3,7 @@
     <router-link to="/" exact class="italic">About</router-link>
     <router-link to="/projects" class="italic">Projects</router-link>
     <a
-      href="/assets/Vaswani_Ashwin_Resume.pdf?v=3.0"
+      href="/assets/Vaswani_Ashwin_Resume.pdf?v=4.0"
       target="_blank"
       class="italic"
       >Resume</a
