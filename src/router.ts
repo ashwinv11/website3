@@ -32,15 +32,6 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "project" */ './views/Project.vue'),
     },
-    {
-      path: '/about',
-      name: 'about',
-      meta: {
-        title: 'Ashwin Vaswani // About',
-      },
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
     { path: '*', redirect: { name: 'home' } },
   ],
   scrollBehavior(to, from, savedPosition) {
