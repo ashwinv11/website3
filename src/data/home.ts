@@ -1,6 +1,6 @@
 export const Data: object = {
   title: `Hi, I'm Ashwin`,
-  body: `<span class="italic">Lead Software Engineer</span> at
+  body: `<span class="italic">Engineering Manager</span> at
         <a href="https://get.chownow.com/" target="_blank" class="italic">ChowNow</a>,
         with a <span class="italic">BFA in
         <a href="https://mtiid.calarts.edu/" target="_blank">Music Technology</a>
@@ -10,7 +10,7 @@ export const Data: object = {
         <span class="italic">CalArts</span>.`,
 }
 
-const synopsis = `colorful. creative. coder. Ashwin Vaswani is a Software Engineer based in Los Angeles, California. Proficient in languages like Ruby, JavaScript, and PHP, he's interested in modern full stack web development and solving human problems through code.`
+const synopsis = `colorful. creative. coder. Ashwin Vaswani is an empathetic engineering leader and coder with a passion for building high-performing, happy teams and solving problems through technology.`
 const imgURL = 'https://ashwinvaswani.com/images/ashwin-vaswani-glitch.png'
 
 export const AppMeta: any = {
