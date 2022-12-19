@@ -2,20 +2,20 @@
 
 ## Features
 
-* :white_check_mark: [Vue 2+](https://vuejs.org/)
-* :white_check_mark: [Vue CLI 3+](https://cli.vuejs.org/) with the following plugins:
+- :white_check_mark: [Vue 2+](https://vuejs.org/)
+- :white_check_mark: [Vue CLI 3+](https://cli.vuejs.org/) with the following plugins:
   - :zap: [Babel](https://babeljs.io/)
   - :pencil2: [Typescript](https://www.typescriptlang.org/docs/home.html)
   - :globe_with_meridians: [PWA Support](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa)
-* :white_check_mark: [Vue Router](https://router.vuejs.org/)
-* :white_check_mark: [SASS](https://sass-lang.com/guide) for styles
-* :white_check_mark: [TSLint](https://github.com/palantir/tslint) & [Stylelint](https://github.com/stylelint/stylelint) for linting
-* :white_check_mark: [Prettier](https://github.com/prettier/prettier) for code formatting
-* :white_check_mark: [Lintstaged](https://github.com/okonet/lint-staged) for Git pre-commit hooks
+- :white_check_mark: [Vue Router](https://router.vuejs.org/)
+- :white_check_mark: [SASS](https://sass-lang.com/guide) for styles
+- :white_check_mark: [TSLint](https://github.com/palantir/tslint) & [Stylelint](https://github.com/stylelint/stylelint) for linting
+- :white_check_mark: [Prettier](https://github.com/prettier/prettier) for code formatting
+- :white_check_mark: [Lintstaged](https://github.com/okonet/lint-staged) for Git pre-commit hooks
 
 ## Prerequisites
 
-1. [Node](https://nodejs.org/) - recommended installation method for Mac OS: [NVM](https://github.com/creationix/nvm)
+1. [Node](https://nodejs.org/) - recommended installation method for Mac OS: [NVM](https://github.com/creationix/nvm). NOTE: If using asdf and on an M1 Mac you may need to [set the Terminal architecture to x86](https://github.com/nvm-sh/nvm/issues/2480#issuecomment-1137245127)
 2. [Yarn](https://yarnpkg.com/)
 3. [Prettier](https://github.com/prettier/prettier)
 
