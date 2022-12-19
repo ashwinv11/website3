@@ -12,7 +12,7 @@ export const KadBlog: Project = {
          fields of art and creative technology.</p>
 
          <p>I lead development on the company's
-         <a href="https://blog.kadenze.com/" target="_blank">Wordpress blog</a>.
+         <a href="https://blog.kadenze.com/">Wordpress blog</a>.
          Over the years it has gone through 3 major design iterations and has
          migrated between hosting providers. As lead developer, I implemented
          the design team's vision on each page. I developed a custom theme

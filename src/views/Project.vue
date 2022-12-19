@@ -35,7 +35,7 @@
       />
       <div v-html="project.body"></div>
       <h3 v-if="project.link">
-        <a :href="project.link" target="_blank">Link &#8594;</a>
+        <a :href="project.link">Link &#8594;</a>
       </h3>
     </div>
   </article>

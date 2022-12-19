@@ -21,7 +21,7 @@ export const Censored: Project = {
 
         <p>The animations in this video are slowed down due to the screen
         recording, but the source code can be found
-        <a href="https://github.com/ashwinv11/censored" target="_blank">here</a>.</p>`,
+        <a href="https://github.com/ashwinv11/censored">here</a>.</p>`,
   imageFile: 'censored-featured.jpg',
   imageAlt:
     'Printed papers of raw JSON data showing sexual assault statistics in India',

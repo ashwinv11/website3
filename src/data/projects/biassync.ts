@@ -29,7 +29,7 @@ export const Biassync: Project = {
   <p>
     After learning about their impactful mission, I was keen to start working with
     them. I lead development on their new marketing
-    <a href="https://biassync.com" target="_blank">website</a>. I worked closely
+    <a href="https://biassync.com">website</a>. I worked closely
     with their CTO, Dan Gould to help bring their vision to fruition.
   </p>
   <p>

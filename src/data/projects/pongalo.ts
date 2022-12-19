@@ -28,7 +28,7 @@ export const Pongalo: Project = {
   </p>
   <p>
     Since this was a legacy codebase written with
-    <a href="https://tabris.com" target="_blank">Tabris.js</a>, we had a high
+    <a href="https://tabris.com">Tabris.js</a>, we had a high
     number of crashes due to older dependencies – particularly on Android. By
     gradually and carefully upgrading these dependencies to more stable releases,
     we were able to ship a more bug free Android experience and saw a reduced

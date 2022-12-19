@@ -15,23 +15,16 @@
         href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410"
         title="Linkedin"
         class="block-link"
-        target="_blank"
       >
         <icon name="brands/linkedin"></icon>
       </a>
-      <a
-        href="https://github.com/ashwinv11"
-        title="Github"
-        class="block-link"
-        target="_blank"
-      >
+      <a href="https://github.com/ashwinv11" title="Github" class="block-link">
         <icon name="brands/github"></icon>
       </a>
       <a
         href="https://unsplash.com/@ashwinv11"
         title="Unsplash"
         class="block-link"
-        target="_blank"
       >
         <icon name="brands/unsplash"></icon>
       </a>
@@ -39,7 +32,6 @@
         href="https://soundcloud.com/aries-official-music/"
         title="Soundcloud"
         class="block-link"
-        target="_blank"
       >
         <icon name="brands/soundcloud"></icon>
       </a>
@@ -48,7 +40,6 @@
         rel="me"
         title="Mastodon"
         class="block-link"
-        target="_blank"
       >
         <icon name="brands/mastodon"></icon>
       </a>

@@ -8,7 +8,7 @@ export const MTIID: Project = {
   tags: [TechTag.wp, TechTag.php],
   date: 'Jun 23, 2016',
   body: `<p>I lead development on the website for CalArts'
-        <a href="https://mtiid.calarts.edu/" target="_blank">Music
+        <a href="https://mtiid.calarts.edu/">Music
         Technology: Interaction, Intelligence & Design (MTIID)</a> program.</p>`,
   imageFile: 'mtiid-featured.png',
   imageAlt: 'Screenshot of MTIID Website',

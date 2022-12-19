@@ -22,7 +22,7 @@ export const Kadenze: Project = {
           and later as a Web Engineer.</p>
 
           <p>During my time there, I worked on multiple parts of the business. I created the
-          company's <a href="https://blog.kadenze.com" target="_blank">blog</a>,
+          company's <a href="https://blog.kadenze.com">blog</a>,
           wrote automated tests to run against the web team's codebase, but mainly
           worked on the web app that served the company's core products.</p>
 

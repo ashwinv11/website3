@@ -1,9 +1,9 @@
 export const Data: object = {
   title: `Hi, I'm Ashwin`,
   body: `<span class="italic">Engineering Manager</span> at
-        <a href="https://get.chownow.com/" target="_blank" class="italic">ChowNow</a>,
+        <a href="https://get.chownow.com/" class="italic">ChowNow</a>,
         with a <span class="italic">BFA in
-        <a href="https://mtiid.calarts.edu/" target="_blank">Music Technology</a>
+        <a href="https://mtiid.calarts.edu/">Music Technology</a>
         & the Digital Arts.</span>
         Previous work at <span class="italic">sweetgreen</span>,
         <span class="italic">Philosophie</span>, and
