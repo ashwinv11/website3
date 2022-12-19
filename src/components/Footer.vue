@@ -12,11 +12,12 @@
     </div>
     <div class="app__footer-social">
       <a
-        href="mailto:ashwin@vaswani.dev?subject=Hey There Ashwin!"
-        title="Email"
+        href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410"
+        title="Linkedin"
         class="block-link"
+        target="_blank"
       >
-        <icon name="envelope"></icon>
+        <icon name="brands/linkedin"></icon>
       </a>
       <a
         href="https://github.com/ashwinv11"
@@ -27,20 +28,12 @@
         <icon name="brands/github"></icon>
       </a>
       <a
-        href="https://www.linkedin.com/pub/ashwin-vaswani/82/328/410"
-        title="Linkedin"
+        href="https://unsplash.com/@ashwinv11"
+        title="Unsplash"
         class="block-link"
         target="_blank"
       >
-        <icon name="brands/linkedin"></icon>
-      </a>
-      <a
-        href="https://instagram.com/ashwinv11"
-        title="Instagram"
-        class="block-link"
-        target="_blank"
-      >
-        <icon name="brands/instagram"></icon>
+        <icon name="brands/unsplash"></icon>
       </a>
       <a
         href="https://soundcloud.com/aries-official-music/"
@@ -49,6 +42,22 @@
         target="_blank"
       >
         <icon name="brands/soundcloud"></icon>
+      </a>
+      <a
+        href="https://hachyderm.io/@ashwinv11"
+        rel="me"
+        title="Mastodon"
+        class="block-link"
+        target="_blank"
+      >
+        <icon name="brands/mastodon"></icon>
+      </a>
+      <a
+        href="mailto:ashwin@vaswani.dev?subject=Hey There Ashwin!"
+        title="Email"
+        class="block-link"
+      >
+        <icon name="envelope"></icon>
       </a>
     </div>
     <div class="app__footer-project-nav-container">
@@ -66,12 +75,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Icon from 'vue-awesome/components/Icon.vue'
-import 'vue-awesome/icons/envelope'
-import 'vue-awesome/icons/brands/github'
+import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/brands/linkedin'
-import 'vue-awesome/icons/brands/instagram'
+import 'vue-awesome/icons/brands/github'
+import 'vue-awesome/icons/brands/unsplash'
 import 'vue-awesome/icons/brands/soundcloud'
+import 'vue-awesome/icons/brands/mastodon'
+import 'vue-awesome/icons/envelope'
 import VueTippy from 'vue-tippy'
 
 Vue.use(VueTippy, {
@@ -83,7 +93,6 @@ Vue.use(VueTippy, {
 })
 
 import { Projects } from '@/data/projects'
-import { Project } from '@/interfaces'
 
 const findProjectNavItems = (slug: string): any => {
   const projectIndex = Projects.findIndex(project => slug === project.slug)
@@ -123,13 +132,13 @@ export default Vue.extend({
   align-items: center;
 
   a {
-    color: $accent;
+    fill: $accent;
     box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
-      color: $neutral-1;
+      fill: $neutral-1;
       box-shadow: none;
 
       svg {
