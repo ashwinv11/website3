@@ -15,7 +15,7 @@
 
 ## Prerequisites
 
-1. [Node](https://nodejs.org/) - recommended installation method for Mac OS: [NVM](https://github.com/creationix/nvm). NOTE: If using asdf and on an M1 Mac you may need to [set the Terminal architecture to x86](https://github.com/nvm-sh/nvm/issues/2480#issuecomment-1137245127)
+1. [Node](https://nodejs.org/) - recommended installation method for Mac OS: [NVM](https://github.com/creationix/nvm). NOTE: If using asdf and on an M1 Mac you may need to [set the Terminal architecture to x86](https://github.com/nvm-sh/nvm/issues/2480#issuecomment-1137245127) before installing Node.
 2. [Yarn](https://yarnpkg.com/)
 3. [Prettier](https://github.com/prettier/prettier)
 
