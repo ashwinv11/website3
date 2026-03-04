@@ -1,13 +1,13 @@
 export const Data: object = {
   title: `Hi, I'm Ashwin`,
-  body: `<span class="italic">Engineering Manager</span> at
-        <a href="https://get.chownow.com/" class="italic">ChowNow</a>,
+  body: `<span class="italic">Senior Engineering Manager</span> at
+        <a href="https://www.charliehealth.com/" class="italic">Charlie Health</a>,
         with a <span class="italic">BFA in
         <a href="https://mtiid.calarts.edu/">Music Technology</a>
         & the Digital Arts.</span>
-        Previous work at <span class="italic">sweetgreen</span>,
-        <span class="italic">Philosophie</span>, and
-        <span class="italic">CalArts</span>.`,
+        Previous work at <span class="italic">ChowNow</span>,
+        <span class="italic">sweetgreen</span>, and
+        <span class="italic">Philosophie</span>`,
 }
 
 const synopsis = `colorful. creative. coder. Ashwin Vaswani is an empathetic engineering leader and coder with a passion for building high-performing, happy teams and solving problems through technology.`
