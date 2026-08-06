@@ -1,6 +1,6 @@
 export const Data: object = {
   title: `Hi, I'm Ashwin`,
-  body: `<span class="italic">Senior Engineering Manager</span> at
+  body: `<span class="italic">Director of Engineering</span> at
         <a href="https://www.charliehealth.com/" class="italic">Charlie Health</a>,
         with a <span class="italic">BFA in
         <a href="https://mtiid.calarts.edu/">Music Technology</a>
